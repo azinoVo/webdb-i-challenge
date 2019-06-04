@@ -21,7 +21,7 @@ server.post('/', checkBudget, (req, res) => {
         res.status(201).json({message: "Add successful!", budget});
     })
     .catch(err => {
-        res.status(500).json({message: "Add FAILURE!", err});
+        res.status(500).json({message: "Add FAILURE! NAME must be UNIQUE!", err});
     })
 
 });
